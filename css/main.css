@@ -28,6 +28,8 @@ section {
   height: 100%;
 
   background: #fc4a55;
+
+  transition: .5s;
 }
 .bg::before {
   position: absolute;
@@ -189,4 +191,137 @@ header .navigation-list li a:hover {
 }
 .thumb li img {
   max-width: 60px;
+}
+
+.sci {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-50%);
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  display: inline-block;
+
+  margin: 5px 0;
+  
+  transform: scale(0.6);
+  filter: invert(1);
+}
+
+
+@media (max-width: 991px) {
+  .bg::before {
+    display: none;
+  }
+  section {
+    padding: 20px;
+    padding-bottom: 120px;
+  }
+  header {
+    padding: 20px;
+  }
+  header .navigation-list {
+    display: none;
+  }
+  header .navigation-list.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  
+    background: rgba(0, 0, 0, 0.8);
+  }
+  header .navigation-list li a {
+    margin: 5px 0;
+
+    font-size: 1.2em;
+  }
+
+  .toggle {
+    position: relative;
+    z-index: 10000;
+    
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/menu.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+  }
+  .toggle.active {
+    position: fixed;
+    right: 20px;
+
+    background: url('../assets/close.png');
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .content {
+    flex-direction: column;
+
+    margin-top: 100px;
+  }
+  .content .textBox {
+    max-width: 100%;
+  }
+  .content .textBox h2 {
+    margin-bottom: 15px;
+
+    font-size: 2.5em;
+  }
+  .content .imgBox {
+    justify-content: center;
+
+    max-width: 100%;
+  }
+  .content .imgBox img {
+    max-width: 300px;
+  }
+
+  .thumb li {
+    height: 55px;
+    margin: 0 3px;
+  }
+  .thumb li::before {
+    position: absolute;
+    top: -150px;
+    left: 0;
+
+    font-size: 6em;
+  }
+  .thumb li img {
+    max-width: 40px;
+  }
+
+  .sci {
+    right: 0;
+
+    width: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    background: rgba(0, 0, 0, 0.1);
+  }
 }

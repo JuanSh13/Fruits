@@ -21,6 +21,7 @@
     <div class="bg"></div>
     <header>
       <a href="#" class="logotype">Fruits</a>
+      <div class="toggle"></div>
       <ul class="navigation-list">
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Menu</a></li>
@@ -35,15 +36,30 @@
         <a href="#">Learn More</a>
       </div>
       <div class="imgBox">
-        <img src="assets/apple.png" alt="">
+        <img src="assets/apple.png" alt="" class="fruits">
       </div>
     </div>
     <ul class="thumb">
-      <li data-text="Apple"><img src="assets/apple.png" alt=""></li>
-      <li data-text="Mango"><img src="assets/mango.png" alt=""></li>
-      <li data-text="Watermelon"><img src="assets/watermelon.png" alt=""></li>
-      <li data-text="Dragon Fruits"><img src="assets/dragonFruits.png" alt=""></li>
-      <li data-text="Pineapple"><img src="assets/pineApple.png" alt=""></li>
+      <li data-text="Apple">
+        <img src="assets/apple.png" alt="Apple" onclick="imgSlider('apple.png');changeBgColor('#fc4a55')">
+      </li>
+      <li data-text="Mango">
+        <img src="assets/mango.png" alt="Mango" onclick="imgSlider('mango.png');changeBgColor('#ffcc02')">
+      </li>
+      <li data-text="Watermelon">
+        <img src="assets/watermelon.png" alt="Watermelon" onclick="imgSlider('watermelon.png');changeBgColor('#92ba3c')">
+      </li>
+      <li data-text="Dragon Fruits">
+        <img src="assets/dragonFruits.png" alt="Dragon Fruits" onclick="imgSlider('dragonFruits.png');changeBgColor('#fb6cb2')">
+      </li>
+      <li data-text="Pineapple">
+        <img src="assets/pineApple.png" alt="Pineapple" onclick="imgSlider('pineApple.png');changeBgColor('#ffb42b')">
+      </li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="assets/facebook.png" alt="facebook"></a></li>
+      <li><a href="#"><img src="assets/twitter.png" alt="twitter"></a></li>
+      <li><a href="#"><img src="assets/instagram.png" alt="instagram"></a></li>
     </ul>
   </section>
 
